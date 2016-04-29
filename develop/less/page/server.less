@@ -1,0 +1,53 @@
+// Core variables and mixins
+@import "../variables.less";
+@import "../mixins.less";
+
+@import "../common/header.less";
+@import "../component/cell.less";
+@import "../component/checkbox.less";
+@import "../component/button.less";
+
+//头部头像区域
+.head{
+  height: 13.75rem;
+  background: #0099FF;
+  text-align: center;
+}
+.head-img{
+  width: 6.25rem;
+  height: 6.25rem;
+  border: 3px solid rgba(0, 0, 0, .1);
+  .border-radius(50%);
+  margin: 2.85rem auto 1rem;
+  img{
+    width: 100%;
+    height: 100%;
+    .border-radius(50%);
+  }
+}
+
+//信息描述区域
+.desc{
+  margin-top: 1rem;
+  padding-bottom: .625rem;
+  .border-bottom();
+}
+.desc-ct{
+  color: @text-color-blur;
+  font-size: @font-size-normal;
+  padding-left: .625rem;
+  p{
+    text-indent: 1em;
+  }
+  img{
+    width: 3.125rem;
+    height: 3.125rem;
+    .border-radius(8px);
+    margin-right: 1rem;
+  }
+}
+.btn-theme1{
+  width: 95%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

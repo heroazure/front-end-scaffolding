@@ -1,0 +1,123 @@
+.button-variant(@color; @background; @border:transparent) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+
+  &:focus,
+  &.focus {
+    color: @color;
+    background-color: darken(@background, 10%);
+    border-color: darken(@border, 25%);
+  }
+  &:hover {
+    color: @color;
+    background-color: darken(@background, 10%);
+    border-color: darken(@border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @color;
+    background-color: darken(@background, 10%);
+    border-color: darken(@border, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: @color;
+      background-color: darken(@background, 17%);
+      border-color: darken(@border, 25%);
+    }
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: @background;
+      border-color: @border;
+    }
+  }
+}
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+  padding: @padding-vertical @padding-horizontal;
+  font-size: @font-size;
+  line-height: @line-height;
+  border-radius: @border-radius;
+}
+@cursor-disabled:                not-allowed;
+.h-btn{
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: @btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: none;
+  white-space: nowrap;
+  .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @btn-border-radius-base);
+  .user-select(none);
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      //.tab-focus();
+      outline: 0;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: @btn-default-color;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+    .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: @cursor-disabled;
+    .opacity(.65);
+    .box-shadow(none);
+  }
+
+  a& {
+    &.disabled,
+    fieldset[disabled] & {
+      pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+    }
+  }
+}
+
+@theme1-color:#fff;
+@theme1-bgcolor:#00CC33;
+.btn-theme1{
+  .button-variant(@theme1-color;@theme1-bgcolor)
+}
+
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  //.button-size(5px,15px,20px,24px,5px);
+}
+
+.btn-normal {
+  // line-height: ensure proper height of button next to small input
+  .button-size(.5rem,.875rem,1.125rem,1.5rem,.5rem);
+}
