@@ -1,7 +1,7 @@
 {
-  "name": "waboon",
-  "version": "2.0.0",
-  "description": "杭州哇宝科技有限公司",
+  "name": "heroxiao",
+  "version": "1.0.0",
+  "description": "heroxiao的web前端项目基本脚手架，基于less,seajs,font-icon,grunt自动化构建",
   "main": "Gruntfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -21,11 +21,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.waboon.cn:waboon/wabsite.git"
+    "url": "git+https://github.com/heroazure/front-end-scaffolding.git"
   },
   "keywords": [
-    "杭州哇宝科技"
+    "web前端，web前端脚手架，grunt，less，seajs"
   ],
-  "author": "waboon",
-  "license": "ISC"
+  "author": "heroxiao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heroazure/front-end-scaffolding/issues"
+  },
+  "homepage": "https://github.com/heroazure/front-end-scaffolding#readme"
 }
